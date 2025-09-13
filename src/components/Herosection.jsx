@@ -1,12 +1,15 @@
-import React from "react";
+import {React,useEffect}  from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../style/Button";
 import { useGlobalContext } from "../context";
 
-const HeroSection = () => {
-  const { name, image } = useGlobalContext();
 
+const HeroSection = () => {
+  const { name, image,updateHomePage } = useGlobalContext();
+ useEffect(() => {
+    updateHomePage();  
+  }, []);
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
