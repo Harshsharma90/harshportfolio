@@ -57,7 +57,7 @@ const AppProvider = ({ children }) => {
       type: "HOME_UPDATE",
       payload: {
         name: "Harsh Sharma",
-        image: "/images/hero.svg",
+        image: "./images/hero.svg",
       },
     });
   };
@@ -67,7 +67,7 @@ const AppProvider = ({ children }) => {
       type: "ABOUT_UPDATE",
       payload: {
         name: "Harsh Developer",
-        image: "/images/about1.svg",
+        image: "./images/about1.svg",
       },
     });
   };
@@ -94,3 +94,4 @@ const useGlobalContext = () => {
 };
 
 export { AppProvider, useGlobalContext };
+
